@@ -1,0 +1,73 @@
+.team {
+    background-color: var(--background-color-light);
+}
+
+.team-list {
+    display: flex;
+    gap: 30px;
+}
+
+.team-list-item {
+    background: var(--color-invert);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
+    flex-basis: calc((100% - 90px) / 4);
+}
+
+.team-list-description-block {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.team-list-member {
+    margin-bottom: 10px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+.team-list-member-info {
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--color-secondary);
+    margin-bottom: 16px;
+}
+
+.team-list-member-links {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.team-list-member-link {
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-list-member-icon {
+    fill: var(--fill-icons);
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-list-member-link:hover,
+.team-list-member-link:focus {
+    background-color: var(--color-accent);
+}
+
+.team-list-member-link:hover .team-list-member-icon,
+.team-list-member-link:focus .team-list-member-icon {
+    fill: var(--color-invert);
+}

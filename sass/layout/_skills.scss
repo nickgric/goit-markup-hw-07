@@ -1,0 +1,32 @@
+.skills-list {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    display: flex;
+    gap: 30px;
+}
+
+.skills-list-image {
+    background-color: var(--background-color-light);
+    margin-bottom: 30px;
+    border-radius: 4px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills-list-title {
+    margin-bottom: 10px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.skills-list-about {
+    color: var(--color-secondary);
+}
