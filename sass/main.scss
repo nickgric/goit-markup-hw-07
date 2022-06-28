@@ -1,5 +1,6 @@
 @import "./utils/variables";
 @import "./utils/hidden";
+@import "./utils/placeholders";
 
 @import "./base/common";
 @import "./base/container";
@@ -9,6 +10,10 @@
 @import "./components/backdrop";
 @import "./components/modal-window";
 @import "./components/modal-form";
+@import "./components/logo";
+@import "./components/nav";
+@import "./components/contacts";
+@import "./components/button";
 
 @import "./layout/header";
 @import "./layout/hero";
@@ -18,3 +23,4 @@
 @import "./layout/clients";
 @import "./layout/projects";
 @import "./layout/footer";
+@import "./layout/contacts";

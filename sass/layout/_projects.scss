@@ -1,11 +1,11 @@
-.projects-filter {
+.projects__filter {
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
     gap: 8px;
 }
 
-.projects-filter-buttons {
+.projects__filter-buttons {
     padding: 6px 22px 6px 22px;
 
     background: var(--background-color-light);
@@ -18,18 +18,20 @@
     letter-spacing: 0.03em;
 
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.projects-filter-buttons:hover,
-.projects-filter-buttons:focus {
+    &:hover,
+    &:focus {
     background: var(--color-accent);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
 
     color: var(--color-invert);
 }
+}
 
-.projects-list {
+
+
+.projects__list {
     display: flex;
     gap: 30px;
 
@@ -37,21 +39,21 @@
     flex-wrap: wrap;
 }
 
-.projects-list-item {
+.projects__item {
     flex-basis: calc((100% - 60px) / 3);
 }
 
-.projects-link {
+.projects__link {
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
-.projects-link:focus,
-.projects-link:hover {
+.projects__link:focus,
+.projects__link:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.projects-list-title {
+.projects__title {
     margin-bottom: 4px;
 
     font-weight: 700;
@@ -60,7 +62,7 @@
     letter-spacing: 0.06em;
 }
 
-.projects-list-description-block {
+.projects__description-block {
     padding: 20px 24px 20px 24px;
     background: var(--color-invert);
     border-left: 1px solid #EEEEEE;
@@ -68,24 +70,24 @@
     border-bottom: 1px solid #EEEEEE;
 }
 
-.projects-list-description {
+.projects__description {
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.03em;
     color: var(--color-secondary);
 }
 
-.projects-list-item-box {
+.projects__item-box {
     position: relative;
     overflow: hidden;
 }
 
-.projects-list-item-memo {
+.projects__memo {
     color: var(--color-invert);
     display: block;
 }
 
-.projects-list-item-memo-box {
+.projects__memo-box {
     width: 100%;
     height: 100%;
     padding: 63px 24px;
@@ -102,7 +104,7 @@
     transition: bottom 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.projects-link:focus .projects-list-item-memo-box ,
-.projects-link:hover .projects-list-item-memo-box  {
+.projects__link:focus .projects__memo-box,
+.projects__link:hover .projects__memo-box  {
     bottom: 0;
 }

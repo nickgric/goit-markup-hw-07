@@ -1,4 +1,4 @@
-.skills-list {
+.skills__list {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
@@ -7,7 +7,7 @@
     gap: 30px;
 }
 
-.skills-list-image {
+.skills__thumb {
     background-color: var(--background-color-light);
     margin-bottom: 30px;
     border-radius: 4px;
@@ -17,7 +17,7 @@
     justify-content: center;
 }
 
-.skills-list-title {
+.skills__title {
     margin-bottom: 10px;
 
     font-weight: 700;
@@ -27,6 +27,6 @@
     text-transform: uppercase;
 }
 
-.skills-list-about {
+.skills__about {
     color: var(--color-secondary);
 }

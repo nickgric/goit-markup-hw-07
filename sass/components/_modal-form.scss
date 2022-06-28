@@ -1,19 +1,9 @@
-.modal-title {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.15;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: #212121;
-    margin-bottom: 12px;
-}
-
 .modal-form {
     display: flex;
     flex-direction: column;
 }
 
-.modal-label {
+.modal-form__label {
     font-weight: 400;
     font-size: 12px;
     line-height: 1.17;
@@ -22,13 +12,13 @@
     margin-bottom: 4px;
 }
 
-.modal-line {
+.modal-form__line {
     position: relative;
     display: flex;
     flex-direction: column;
 }
 
-.modal-input {
+.modal-form__input {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     color: var(--color-main);
@@ -39,9 +29,18 @@
     margin-bottom: 10px;
 
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        border: 1px solid var(--color-accent);
+    }
+
+    &::placeholder {
+        color: rgba(0, 0, 0, 0.3);
+    }
 }
 
-.modal-comment {
+.modal-form__comment {
     padding: 12px;
     margin-bottom: 20px;
 
@@ -54,35 +53,33 @@
     resize: none;
 
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        border: 1px solid var(--color-accent);
+    }
+
+    &::placeholder {
+        color: rgba(0, 0, 0, 0.3);
+    }
 }
 
-.modal-input:hover + .modal-icon,
-.modal-input:focus + .modal-icon {
-    fill: var(--color-accent);
-}
-
-.modal-input:hover,
-.modal-input:focus,
-.modal-comment:hover,
-.modal-comment:focus {
-    border: 1px solid var(--color-accent);
-}
-
-.modal-icon {
+.modal-form__icon {
     position: absolute;
     left: 0;
     fill: var(--color-main);
     top: 11px;
-    left:12px;
+    left: 12px;
 
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .modal-form__input:hover+&,
+    .modal-form__input:focus+& {
+        fill: var(--color-accent);
+    }
 }
 
-.modal-input::placeholder, .modal-comment::placeholder {
-    color: rgba(0, 0, 0, 0.3);
-}
-
-.modal-contract-line {
+.modal-form__contract-line {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,7 +88,7 @@
     margin-right: auto;
 }
 
-.modal-check {
+.modal-form__check {
     width: 16px;
     height: 15px;
     border: solid 2px var(--color-main);
@@ -104,11 +101,11 @@
     cursor: pointer;
 }
 
-.modal-check-icon {
+.modal-form__check-icon {
     fill: var(--color-invert);
 }
 
-.modal-contract-label {
+.modal-form__contract-label {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,52 +114,32 @@
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--color-secondary);
+
+    &::before {
+        content: '';
+        width: 16px;
+        height: 15px;
+        border: solid 2px var(--color-main);
+        border-radius: 2px;
+        margin-right: 9px;
+        display: block;
+        cursor: pointer;
+    }
 }
 
-.modal-contract-label::before {
-    content: '';
-    width: 16px;
-    height: 15px;
-    border: solid 2px var(--color-main);
-    border-radius: 2px;
-    margin-right: 9px;
-    display: block;
-    cursor: pointer;
-}
-
-.modal-hidden-check:checked + .modal-contract-label::before {
+.modal-form__hidden-check:checked + .modal-form__contract-label::before {
     border: solid 2px var(--color-accent);
     background-color: var(--color-accent);
     background-image: url(../images/modal-check.svg);
 }
 
-.modal-contract-link {
+.modal-form__contract-link {
     color: var(--color-accent);
     text-decoration: underline;
     display: inline;
 }
 
-.modal-button {
-    width: 200px;
-    height: 50px;
+.modal-form__button {
     margin-left: auto;
     margin-right: auto;
-    background-color: var(--color-accent);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    color: var(--color-invert);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    letter-spacing: 0.06em;
-
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-button:hover, .modal-button:focus {
-    background-color: #188CE8;;
 }
